@@ -1,0 +1,54 @@
+syntax = "proto3";
+package user.v1;
+
+option go_package = "geektime_homework/forth/api/user/v1;v1";
+
+message User{
+  string id = 1;
+  string name = 2;
+  uint32 age = 3;
+  string password = 4;
+}
+
+message Filter{
+  string name = 1;
+  uint32 min_age = 2;
+}
+
+message AddUserRequest{
+  User user = 1;
+}
+
+message AddUserResponse{
+  string id = 1;
+}
+
+message GetUserRequest{
+  string id = 1;
+}
+
+message GetUserResponse{
+  User user = 1;
+}
+
+message ListUserRequest{
+  Filter filter = 1;
+}
+
+message ListUserResponse{
+  repeated User user = 1;
+}
+
+service UserService{
+  rpc AddUser(AddUserRequest) returns(AddUserResponse){};
+  rpc GetUser(GetUserRequest) returns (GetUserResponse){};
+  rpc ListUser(ListUserRequest) returns (ListUserResponse){};
+}
+
+
+
+
+
+
+
+
