@@ -1,0 +1,20 @@
+SET: -nanSET: 114692.00SET: 119142.00SET: 120570.66====== SET ======
+  100000 requests completed in 0.83 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+120918.98 requests per second
+
+GET: 138750.00GET: 139584.55GET: 139993.98====== GET ======
+  100000 requests completed in 0.71 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+99.99% <= 1 milliseconds
+100.00% <= 1 milliseconds
+140056.03 requests per second
+
+
