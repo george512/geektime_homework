@@ -55,6 +55,7 @@ func main() {
 			go func() {
 				id, _ := uuid.NewUUID()
 				conn.Set(ctx, id.String(), 0, 0)
+				wg.Done()
 			}()
 		}
 
@@ -75,6 +76,7 @@ func main() {
 		conn.FlushDB(ctx)
 		time.Sleep(3 * time.Second)
 	}
+	return
 END:
 	log.Print(err.Error())
 }
